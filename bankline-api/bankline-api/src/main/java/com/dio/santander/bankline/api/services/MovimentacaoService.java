@@ -31,8 +31,8 @@ public class MovimentacaoService {
 		movimentacao.setDescricao(novaMovimentacao.getDescricao());
 		movimentacao.setIdConta(novaMovimentacao.getIdConta());
 		movimentacao.setTipo(novaMovimentacao.getTipo());
-		//movimentacao.setValor(movimentacao.getValor());
-		movimentacao.setValor(valor);
+		movimentacao.setValor(movimentacao.getValor());
+		//movimentacao.setValor(valor);
 		
 		Correntista correntista = correntistaRepository.findById(novaMovimentacao.getIdConta()).orElse(null);
 		if(correntista != null) {
